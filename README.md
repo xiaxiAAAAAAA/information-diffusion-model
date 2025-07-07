@@ -24,7 +24,7 @@ The core objective of this framework is to quantify and predict user engagement 
 2. Twitter Dataset (PHEME-like)
     - Source: Assumed to be a collection of JSON files, structured similarly to the PHEME dataset for rumor analysis.
     - Structure: The framework expects a directory structure where each event is a folder containing rumours and non-rumours subdirectories. These, in turn, contain source-tweet and reactions folders with the raw tweet JSON objects.
-    - Setup: Place your Twitter dataset directories (e.g., sydneysiege) inside the data/ folder. The main.py script is pre-configured to look for this structure.
+    - Setup: Place your Twitter dataset directories inside the data/ folder. The main.py script is pre-configured to look for this structure.
 
 # :bulb: Data Processing
 ## Weibo Data Processing
