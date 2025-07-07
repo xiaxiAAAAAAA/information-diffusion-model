@@ -14,7 +14,9 @@ The core objective of this framework is to quantify and predict user engagement 
     - CB (Cognitive Bias): A composite score calculated using a Fuzzy Logic System that combines PI, SE, and IM.
 3. Cognition Modeling: Employs Fuzzy C-Means clustering to model group-level and social-level cognition from individual CB scores. This allows for the simulation of social influence.
 4. Evolutionary Game Simulation: A simplified game-theoretic model simulates the strategic choices of users (to spread a rumor or an anti-rumor). The simulation determines a stable strategy proportion within the user population.
-5. Driving Force Calculation: Based on the final state of the game, the framework calculates the Driving Force for each user to adopt either the rumor or anti-rumor strategy. This final output quantifies the likelihood of a user propagating a certain type of information.
+5. Driving Force Calculation: The final outputs are derived from the game's results:
+    - Driving Force : A value between 0 and 1, calculated from the difference in potential payoffs. It represents a user's propensity or inclination to spread a rumor vs. an anti-rumor.
+    - Forwarding Probability : The ultimate prediction. It translates the Driving Force into a concrete probability that a user will forward a message to their neighbors, modeled using a binomial distribution as described in academic literature.
 
 # :bulb: Dataset
 1. Weibo Dataset
@@ -46,9 +48,9 @@ The core objective of this framework is to quantify and predict user engagement 
 # :bulb: Models
 The core of the framework relies on a sequence of models to derive the final driving force.
 1. Fuzzy Logic System (FuzzySystem)
-- Purpose: To translate crisp input features (PI, SE, IM) into a single, nuanced Cognitive Bias (CB) score.
-- Mechanism: It uses a set of "IF-THEN" rules defined over fuzzy sets (e.g., "IF PI is HIGH and SE is MEDIUM THEN CB is HIGH"). The skfuzzy library is used to manage the variables, membership functions, and inference engine.
-- Output: A single, defuzzified CB value for each user, representing their overall cognitive state regarding the topic.
+    - Purpose: To translate crisp input features (PI, SE, IM) into a single, nuanced Cognitive Bias (CB) score.
+    - Mechanism: It uses a set of "IF-THEN" rules defined over fuzzy sets (e.g., "IF PI is HIGH and SE is MEDIUM THEN CB is HIGH"). The skfuzzy library is used to manage the variables, membership functions, and inference engine.
+    - Output: A single, defuzzified CB value for each user, representing their overall cognitive state regarding the topic.
 2. Cognition Modeling (run_cognition_modeling)
     - Purpose: To simulate social influence by modeling cognition at individual, group, and societal levels.
     - Mechanism:
