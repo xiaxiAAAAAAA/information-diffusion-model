@@ -1,4 +1,4 @@
-# information-diffusion-model
+# Rumor-diffusion-model
 This project provides a comprehensive and modular framework **(STIR)** for analyzing the propagation dynamics of rumors and anti-rumors on social media platforms like Weibo and Twitter. It leverages a simplified evolutionary game model, without relying on complex graph structures, to simulate user behavior and predict the driving forces behind information spread.
 
 # Update
