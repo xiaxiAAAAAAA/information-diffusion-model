@@ -185,12 +185,12 @@ def extract_twitter_features(data_file: str, output_file: str, H_topic: float):
     data.loc[data['statuses'] == 0, 'statuses'] = 1
     data.loc[data['followers'] == 0, 'followers'] = 1
     PI = 0.3 * (data['retweet'] / data['statuses']) + 0.2 * ((data['retweet'] + data['favourites']) / data['followers']) + 0.1 * (data['friends'] / data['followers'])
-    data['PI'] = np.clip(PI.fillna(0), 0, 1)
-    data['SE'] = np.clip(calculate_twitter_resonance_scores(data['text']), 0, 1)
+    data['PI'] = PI
+    data['SE'] = calculate_twitter_resonance_scores(data['text'])
     knowledge = np.random.lognormal(1.22, 0.62, len(data))
     r1, r2, T = 1.92, 3.14, 2.16
     time_factor = r1 + r2 * np.sin(np.arange(len(data)) / T * np.pi)
-    data['IM'] = np.clip(H_topic * time_factor * knowledge, 0, 1)
+    data['IM'] = H_topic * time_factor * knowledge
     data['CB'] = data.apply(lambda row: fuzzy_system.calculate_cb(row['PI'], row['SE'], row['IM']), axis=1)
     
     # Save features to file with a consistent date format.
