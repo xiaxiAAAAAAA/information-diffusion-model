@@ -69,9 +69,9 @@ The core of the framework relies on a sequence of models to derive the final dri
 # :ledger: Reference 
 ## Dataset
 **<u>Weibo</u>**. Social influence locality
-for modeling retweeting behaviors. (Zhang et al., 2013) [[paper]](https://keg.cs.tsinghua.edu.cn/jietang/publications/IJCAI13-Zhang-et-al-social-influence-locality.pdf) [[Dataset]](https://www.aminer.cn/influencelocality)
+for modeling retweeting behaviors. (Zhang et al., 2013) [[paper]](https://keg.cs.tsinghua.edu.cn/jietang/publications/IJCAI13-Zhang-et-al-social-influence-locality.pdf) [[Dataset]](https://www.aminer.cn/influencelocality) [[Dataset_SQL]](https://drive.google.com/file/d/1EEcZmY8FRpJFl0YxjfDcpeMyxNHRskGc/view?usp=drive_link)
 
-**<u>Twitter</u>**. Analysing how people orient to and spread rumours in social media by looking at conversational threads. (Zubiaga  al., 2016) [[paper]](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0150989) [[Dataset]](https://figshare.com/articles/dataset/PHEME_rumour_scheme_dataset_journalism_use_case/2068650/2)
+**<u>Twitter</u>**. Analysing how people orient to and spread rumours in social media by looking at conversational threads. (Zubiaga  al., 2016) [[paper]](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0150989) [[Dataset1]](https://figshare.com/articles/dataset/PHEME_rumour_scheme_dataset_journalism_use_case/2068650/2) [[Dataset2]](https://figshare.com/articles/dataset/PHEME_dataset_of_rumours_and_non-rumours/4010619?file=6453753)
 
 ## Other SIR based models
 
